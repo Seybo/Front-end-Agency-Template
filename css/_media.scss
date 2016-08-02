@@ -1,0 +1,90 @@
+/* Large desktops and laptops */
+@media (min-width: $screen-lg +1) {
+
+}
+
+/* Landscape tablets and medium desktops */
+@media (max-width: $screen-lg) {
+  
+  header #top-menu {
+    li a {
+      padding: 0 20px;
+    }
+  }
+
+}
+
+/* Portrait tablets and small desktops */
+@media (max-width: $screen-md) {
+  
+  p {
+    font-size: $font-size-base;
+  }
+
+  h1 {
+    font-size: $font-size-h1;
+  }
+
+  header #top-menu {
+    li a {
+      padding: 0 15px;
+    }
+  }
+
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: $screen-sm - 1) {
+
+  p {
+    font-size: $font-size-small;
+  }
+
+  h1 {
+    font-size: $font-size-h3;
+  }
+
+  nav {
+    height: 60px;
+    line-height: 60px;
+
+    .top-line {
+      display: none;
+    }
+
+    #top-menu {
+      background: $theme-color1;
+
+      li {
+        display: block;
+        font-size: 16px;
+
+        a {
+          display: block;
+          text-align: center;
+          &:hover {
+            color: $theme-color1;
+            background: white;   
+          }
+        }
+      }
+    }
+  }
+
+  header {
+    height: 400px;
+
+    .title-block {
+      padding-top: 100px;
+    }
+  }
+
+  .my-btn {
+    @include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
+  }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: $screen-xs) {
+
+}

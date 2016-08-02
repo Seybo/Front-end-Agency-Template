@@ -7769,20 +7769,55 @@ body {
   min-width: 320px;
 }
 
-body h1, body h2, body h3, body h4,
+body .zero-padding {
+  padding: 0;
+}
+
 body .btn {
   font-family: "ubuntumedium", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
 }
 
-body .zero-padding {
-  padding: 0;
+body .section-header {
+  display: flex;
+  color: #D13E3E;
+  font-family: "ubuntumedium", Helvetica, Arial, sans-serif;
+  text-transform: capitalize;
+  justify-content: center;
+  margin: 100px 0;
+}
+
+body .section-header h2 {
+  position: relative;
+}
+
+body .section-header h2:before {
+  content: "•";
+  position: absolute;
+  left: -30px;
+}
+
+body .section-header h2:after {
+  content: "•";
+  position: absolute;
+  right: -30px;
 }
 
 header {
   height: 500px;
   position: relative;
   z-index: 1;
+}
+
+header h1, header h2, header h3, header h4 {
+  font-family: "ubuntumedium", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  color: white;
+}
+
+header p {
+  color: #741c1c;
+  font-size: 18px;
 }
 
 header:before {
@@ -7804,18 +7839,6 @@ header .menu {
 
 header .title-block {
   padding-top: 150px;
-}
-
-header h1 {
-  color: white;
-}
-
-header p {
-  color: white;
-}
-
-header a {
-  color: gray;
 }
 
 header nav {
@@ -7873,15 +7896,15 @@ header #top-menu li a {
 }
 
 .section-1 {
-  padding: 95px 0;
+  margin: 100px 0;
 }
 
-.settings {
+.section-2-settings {
   text-align: center;
   margin-bottom: 70px;
 }
 
-.settings .fa {
+.section-2-settings .fa {
   font-size: 40px;
   color: #D13E3E;
 }

@@ -27,3 +27,17 @@ $logo: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi
     }
   }
 }
+
+@mixin header-hashes {
+  position: relative;
+  &:before {
+    content: "•";
+    position: absolute;
+    left: -30px;
+  }
+  &:after {
+    content: "•";
+    position: absolute;
+    right: -30px;
+  }
+}

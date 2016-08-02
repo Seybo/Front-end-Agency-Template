@@ -3,16 +3,27 @@ body {
   font-family: $font-vollkorn;
   min-width: 320px;
 
-  h1, h2, h3, h4,
+  .zero-padding {
+    padding: 0;
+  }
+
   .btn {
     font-family: $font-ubuntu-medium;
     text-transform: uppercase;
   }
 
-  .zero-padding {
-    padding: 0;
-  }
+  .section-header {
+    display: flex;
+    color: $theme-color1;
+    font-family: $font-ubuntu-medium;
+    text-transform: capitalize;
+    justify-content: center;
+    margin: 100px 0;
 
+    h2 {
+      @include header-hashes; 
+      }
+    }
 } // body
 
 // ******** header
@@ -22,6 +33,17 @@ header {
   // background: $header-background;
   position: relative;
   z-index: 1;
+
+  h1, h2, h3, h4 {
+    font-family: $font-ubuntu-medium;
+    text-transform: uppercase;
+    color: white;
+  }
+
+  p {
+    color: $link-hover-color;
+    font-size: $font-size-large;
+  }
 
   &:before {
     content: "";
@@ -42,18 +64,6 @@ header {
 
   .title-block {
     padding-top: 150px;
-  }
-
-  h1 {
-    color: white;
-  }
-
-  p {
-    color: white;
-  }
-
-  a {
-    color: gray;
   }
 
   nav {
@@ -103,11 +113,13 @@ header {
 } // header
 
 // ******** section-1
+
 .section-1 {
-  padding: 95px 0;
+  margin: 100px 0;
 }
 
-.settings {
+// ******** section-2
+.section-2-settings {
   text-align: center;
   margin-bottom: 70px;
   .fa {
@@ -115,29 +127,6 @@ header {
     color: $theme-color1;
   }
 }
-
-
-// ******** section-2
-// .image-settings {
-//   position: relative;
-
-//   .image-description-wrap {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//   }
-
-//   img {
-//     position: absolute;
-//     top: 0;
-//     bottom: 0;
-//     left: 0;
-//     right: 0;
-//     margin: auto;
-//   }
-// }
 
 /* item styles */
 .item-image {
@@ -188,7 +177,6 @@ header {
 }
 
 
-// ******** header
 // ******** header
 
 

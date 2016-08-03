@@ -1411,7 +1411,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857;
-  color: #333333;
+  color: #52656B;
   background-color: #fff;
 }
 
@@ -1430,7 +1430,7 @@ a {
 }
 
 a:hover, a:focus {
-  color: #23527c;
+  color: #741c1c;
   text-decoration: underline;
 }
 
@@ -3531,7 +3531,7 @@ select[multiple].input-lg,
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #737373;
+  color: #91a5ab;
 }
 
 @media (min-width: 768px) {
@@ -4021,7 +4021,7 @@ fieldset[disabled] .btn-link {
 }
 
 .btn-link:hover, .btn-link:focus {
-  color: #23527c;
+  color: #741c1c;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -5463,7 +5463,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > li > span:hover,
 .pagination > li > span:focus {
   z-index: 2;
-  color: #23527c;
+  color: #741c1c;
   background-color: #eeeeee;
   border-color: #ddd;
 }
@@ -5787,7 +5787,7 @@ a.badge:hover, a.badge:focus {
 
 .thumbnail .caption {
   padding: 9px;
-  color: #333333;
+  color: #52656B;
 }
 
 a.thumbnail:hover,
@@ -7773,7 +7773,7 @@ body .zero-padding {
   padding: 0;
 }
 
-body .btn {
+body .btn, body h4 {
   font-family: "ubuntumedium", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
 }
@@ -7784,7 +7784,7 @@ body .section-header {
   font-family: "ubuntumedium", Helvetica, Arial, sans-serif;
   text-transform: capitalize;
   justify-content: center;
-  margin: 100px 0;
+  margin: 100px 0 50px 0;
 }
 
 body .section-header h2 {
@@ -7792,21 +7792,53 @@ body .section-header h2 {
 }
 
 body .section-header h2:before {
-  content: "•";
+  content: "";
   position: absolute;
-  left: -30px;
+  left: -20px;
+  top: 25px;
+  width: 0;
+  height: 0;
+  border-bottom: 10px solid red;
+  border-right: 10px solid transparent;
 }
 
 body .section-header h2:after {
-  content: "•";
+  content: "";
   position: absolute;
-  right: -30px;
+  right: -19px;
+  top: 0px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid red;
+  border-left: 10px solid transparent;
+}
+
+body .social-section {
+  text-align: right;
+  font-size: 25px;
+}
+
+body .social-section a {
+  text-decoration: none;
+  color: #52656B;
+}
+
+body .social-section a:visited {
+  color: #52656B;
+}
+
+body .social-section a:hover {
+  color: #D13E3E;
+}
+
+body .social-section a:active {
+  color: #D13E3E;
 }
 
 header {
-  height: 500px;
   position: relative;
   z-index: 1;
+  padding-bottom: 15%;
 }
 
 header h1, header h2, header h3, header h4 {
@@ -7827,7 +7859,6 @@ header:before {
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 1;
   z-index: -1;
   background-image: url(/img/header.jpg);
   background-size: cover;
@@ -7864,6 +7895,7 @@ header .top-line {
 header #top-menu ul {
   list-style-type: none;
   padding: 0;
+  margin: 0 20px;
 }
 
 header #top-menu li {
@@ -7871,6 +7903,7 @@ header #top-menu li {
   text-transform: uppercase;
   font-size: 16.8px;
   font-family: "ubuntumedium", Helvetica, Arial, sans-serif;
+  color: white;
 }
 
 header #top-menu li a {
@@ -7895,29 +7928,47 @@ header #top-menu li a {
   padding: 0 30px;
 }
 
-.section-1 {
-  margin: 100px 0;
+.section-1 h3 {
+  text-transform: capitalize;
+  margin-bottom: 5px;
 }
 
-.section-2-settings {
+.section-1 .item-content p, .section-1 .item-content span {
+  text-align: right;
+}
+
+.section-1 .item-content p {
+  min-height: 120px;
+}
+
+.section-1 span {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.section-2 .clearfix {
+  margin-bottom: 50px;
+}
+
+.section-2 .section-2-settings {
   text-align: center;
-  margin-bottom: 70px;
 }
 
-.section-2-settings .fa {
+.section-2 .section-2-settings .fa {
   font-size: 40px;
   color: #D13E3E;
 }
 
-/* item styles */
-.item-image {
+.section-3 .item-image {
   position: relative;
   overflow: hidden;
   padding-bottom: 50%;
 }
 
-.item-image img,
-.item-content {
+.section-3 .item-image img,
+.section-3 .item-content {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -7929,34 +7980,70 @@ header #top-menu li a {
   color: white;
 }
 
-.item-content {
+.section-3 .item-content {
   opacity: 0;
   display: flex;
   flex-direction: column;
 }
 
-.item-content:hover {
+.section-3 .item-content:hover {
   opacity: 1;
 }
 
-.item-content h4 {
+.section-3 .item-content h4 {
   flex-grow: 1;
   margin: 30px auto;
 }
 
-.item-content p {
+.section-3 .item-content p {
   flex-grow: 5;
   text-align: center;
   padding: 0 20px;
 }
 
-.item-text {
-  overflow: hidden;
-  height: 100px;
+.section-4 {
+  text-align: center;
 }
 
-.content-wrap {
-  margin: auto;
+.section-4 h2 {
+  margin: 0;
+  font-family: "ubuntumedium", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+.section-4 h4 {
+  margin-bottom: 50px;
+  text-transform: none;
+}
+
+footer {
+  height: 100px;
+  margin-top: 100px;
+  background-color: #D13E3E;
+  text-align: center;
+}
+
+footer .social-section {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 30px;
+}
+
+footer .social-section a {
+  text-decoration: none;
+  color: white;
+}
+
+footer .social-section a:visited {
+  color: white;
+}
+
+footer .social-section a:hover {
+  color: white;
+}
+
+footer .social-section a:active {
+  color: white;
 }
 
 .my-btn {
@@ -7998,14 +8085,17 @@ header #top-menu li a {
   header #top-menu li a {
     padding: 0 15px;
   }
+  .section-1 .social-section {
+    margin-bottom: 30px;
+  }
+  .section-1 .item-content p {
+    min-height: 75px;
+  }
 }
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
-  p {
-    font-size: 12px;
-  }
-  h1 {
+  h1, h2 {
     font-size: 24px;
   }
   nav {
@@ -8034,13 +8124,31 @@ header #top-menu li a {
     height: 400px;
   }
   header .title-block {
-    padding-top: 100px;
+    padding: 100px 20px;
   }
   .my-btn {
     padding: 5px 10px;
     font-size: 12px;
     line-height: 1.5;
     border-radius: 3px;
+  }
+  body .section-header {
+    margin: 50px 0 50px 0;
+  }
+  .section-1 {
+    margin: 0 50px;
+  }
+  .section-1 .social-section {
+    margin-bottom: 20px;
+  }
+  .section-1 .item-content p {
+    min-height: 0px;
+  }
+  .section-2 {
+    margin: 0 50px;
+  }
+  .section-2 .col-sm-6:not(:first-child) i {
+    margin-top: 50px;
   }
 }
 
